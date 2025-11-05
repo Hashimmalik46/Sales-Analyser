@@ -83,7 +83,8 @@ st.markdown("""
         left: 0;
         bottom: 0;
         width: 100%;
-        color: #888;
+        background-color:#161b22;
+        color: #c9d1d9;
         text-align: center;
         font-size: 13px;
         padding: 5px 0;
@@ -91,7 +92,7 @@ st.markdown("""
     }
     .footer a {
         text-decoration: none;
-        color: #888;
+        color: #c9d1d9;
         margin: 0 6px;
     }
     .footer a:hover {
