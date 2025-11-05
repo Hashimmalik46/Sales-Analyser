@@ -73,3 +73,38 @@ if uploaded_file is not None:
 
 else:
     st.info("👆 Please upload a CSV file to see the analysis.")
+# ------------------------------
+# ⚙️ Footer Section
+# ------------------------------
+st.markdown("""
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f0f2f6;
+        color: #555;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 15px;
+        border-top: 1px solid #ddd;
+    }
+    .footer a {
+        text-decoration: none;
+        color: #0068c9;
+        margin: 0 8px;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+        color: #004b9b;
+    }
+    </style>
+
+    <div class="footer">
+        © 2025 <b>RHS Analytics</b> | Built with ❤️ by Rakia, Hashim & Suhail<br>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a> •
+        <a href="https://github.com/Hashimmalik46" target="_blank">GitHub</a> •
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+    </div>
+""", unsafe_allow_html=True)
