@@ -10,13 +10,17 @@ st.set_page_config(page_title="Sales Analyzer Dashboard", layout="wide")
 st.title("📊 Sales Analyzer Dashboard")
 
 # Upload file
-uploaded_file = st.file_uploader("Upload your sales CSV file", type=["csv"])
+uploaded_file = st.file_uploader("Upload your sales file", type=["csv", "xlsx"])
 
 if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
+    # Detect file type and read accordingly
+    if uploaded_file.name.endswith(".csv"):
+        df = pd.read_csv(uploaded_file)
+    elif uploaded_file.name.endswith(".xlsx"):
+        df = pd.read_excel(uploaded_file)
 
     # Clean and prepare
-    df["Date"] = pd.to_datetime(df["Date"])
+    df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
     df["Profit Margin (%)"] = (df["Profit"] / df["Total Sales"]) * 100
 
     st.write("### Data Preview", df.head())
@@ -72,7 +76,8 @@ if uploaded_file is not None:
     st.plotly_chart(fig4, use_container_width=True)
 
 else:
-    st.info("👆 Please upload a CSV file to see the analysis.")
+    st.info("👆 Please upload a CSV or Excel file to see the analysis.")
+
 # ------------------------------
 # ⚙️ Footer
 # ------------------------------
@@ -107,4 +112,3 @@ st.markdown("""
         <a href="https://github.com/Hashimmalik46" target="_blank">GitHub</a>
     </div>
 """, unsafe_allow_html=True)
-
