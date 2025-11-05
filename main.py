@@ -102,9 +102,8 @@ st.markdown("""
     </style>
 
     <div class="footer">
-        © 2025 <b>RHS Analytics</b> | Built with ❤️ by Rakia, Hashim & Suhail<br>
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a> •
+        © 2025 <b>RHS Analytics</b> | Developed by Rakia, Hashim & Suhail<br>
+        <a href="https://www.linkedin.com/in/hashim-malik-a868102b0/" target="_blank">LinkedIn</a> •
         <a href="https://github.com/Hashimmalik46" target="_blank">GitHub</a> •
-        <a href="https://twitter.com" target="_blank">Twitter</a>
     </div>
 """, unsafe_allow_html=True)
