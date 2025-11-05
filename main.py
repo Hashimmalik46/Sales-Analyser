@@ -74,7 +74,7 @@ if uploaded_file is not None:
 else:
     st.info("👆 Please upload a CSV file to see the analysis.")
 # ------------------------------
-# ⚙️ Footer Section
+# ⚙️ Footer
 # ------------------------------
 st.markdown("""
     <style>
@@ -83,27 +83,28 @@ st.markdown("""
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: #f0f2f6;
-        color: #555;
+        background-color: transparent;
+        color: #888;
         text-align: center;
-        padding: 10px 0;
-        font-size: 15px;
-        border-top: 1px solid #ddd;
+        font-size: 13px;
+        padding: 5px 0;
+        border-top: 1px solid rgba(128, 128, 128, 0.2);
     }
     .footer a {
         text-decoration: none;
-        color: #0068c9;
-        margin: 0 8px;
+        color: #888;
+        margin: 0 6px;
     }
     .footer a:hover {
+        color: #0068c9;
         text-decoration: underline;
-        color: #004b9b;
     }
     </style>
 
     <div class="footer">
-        © 2025 <b>RHS Analytics</b> | Developed by Rakia, Hashim & Suhail<br>
-        <a href="https://www.linkedin.com/in/hashim-malik-a868102b0/" target="_blank">LinkedIn</a> •
-        <a href="https://github.com/Hashimmalik46" target="_blank">GitHub</a> •
+        © 2025 <b>RHS Analytics</b> • Developed by Rakia, Hashim & Suhail • 
+        <a href="https://www.linkedin.com/in/hashim-malik-a868102b0/" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/Hashimmalik46" target="_blank">GitHub</a>
     </div>
 """, unsafe_allow_html=True)
+
